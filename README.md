@@ -7,7 +7,7 @@ Project xây dựng trên nền tảng kỹ thuật:
  - ASP.NET CORE
  - ENTITY FRAMEWORK CORE
 
-Đích đến: tích hợp thêm js framework như Vuejs.org và biến projec thành Single Page App, quản lý script gọn gàng hơn.
+Đích đến: tích hợp thêm js framework như Vuejs.org và biến project thành Single Page App, quản lý script gọn gàng hơn.
 
 Mọi người có thể thoải mái clone project về, trong project có bao gồm cả database của web butv.org.  
 

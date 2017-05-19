@@ -1,5 +1,5 @@
 # Butv.org
-Đây là project đầu tiên tôi thử với ASP.net core, 1 nền tảng còn non trẻ nên khá bở ngỡ. Mục đích là chia sẻ học hỏi thêm kinh nghiệm thực tiễn cùng cộng đồng web dev Vietnam.
+Đây là project đầu tiên tôi thử với ASP.net core, 1 nền tảng còn non trẻ nên khá bở ngỡ. Mục đích là chia sẻ học hỏi thêm kinh nghiệm thực tiễn cùng cộng đồng web dev Vietnam. Mọi người có thể dùng nó phát triển cho cách project video, music....
 
 
 Project xây dựng trên nền tảng kỹ thuật:

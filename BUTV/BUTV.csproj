@@ -1,0 +1,95 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <UserSecretsId>aspnet-BUTV-4546da85-7e3a-4d78-a67d-dd8d5aa95139</UserSecretsId>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Content Include="wwwroot\css\ripple.css" />
+    <Content Include="wwwroot\css\ripple.min.css" />
+    <Content Include="wwwroot\css\site.css" />
+    <Content Include="wwwroot\css\site.min.css" />
+    <Content Include="wwwroot\css\slick.css" />
+    <Content Include="wwwroot\css\slick.min.css" />
+    <Content Include="wwwroot\css\toTop.css" />
+    <Content Include="wwwroot\favicon.ico" />
+    <Content Include="wwwroot\images\1237033_470316296400585_2106675438_n.jpg" />
+    <Content Include="wwwroot\images\147254077218824-ly-lien-kiet-01.jpg" />
+    <Content Include="wwwroot\images\banner1.svg" />
+    <Content Include="wwwroot\images\banner2.svg" />
+    <Content Include="wwwroot\images\banner3.svg" />
+    <Content Include="wwwroot\images\banner4.svg" />
+    <Content Include="wwwroot\images\brother-2016.jpg" />
+    <Content Include="wwwroot\images\fresh-teachers.jpg" />
+    <Content Include="wwwroot\images\icon1.png" />
+    <Content Include="wwwroot\images\icon2.png" />
+    <Content Include="wwwroot\images\icon3.png" />
+    <Content Include="wwwroot\images\icons\ajax-loader.gif" />
+    <Content Include="wwwroot\images\icons\icon4.png" />
+    <Content Include="wwwroot\images\kong-skull-island.jpg" />
+    <Content Include="wwwroot\images\kung-fu-yoga.jpg" />
+    <Content Include="wwwroot\images\logan-2017.jpg" />
+    <Content Include="wwwroot\images\logo.png" />
+    <Content Include="wwwroot\images\master-devil-do-not-kiss-me.jpg" />
+    <Content Include="wwwroot\images\nguoi-dep-va-quai-vat-belle.jpg" />
+    <Content Include="wwwroot\images\prison-break-season-5-vuot-nguc-phan-5.jpg" />
+    <Content Include="wwwroot\images\social-sprite.png" />
+    <Content Include="wwwroot\images\spinner.svg" />
+    <Content Include="wwwroot\images\star.png" />
+    <Content Include="wwwroot\js\aes.js" />
+    <Content Include="wwwroot\js\banner.js" />
+    <Content Include="wwwroot\js\common.js" />
+    <Content Include="wwwroot\js\jquery.allofthelights-min.js" />
+    <Content Include="wwwroot\js\jquery.cycle2.min.js" />
+    <Content Include="wwwroot\js\site.js" />
+    <Content Include="wwwroot\js\site.min.js" />
+    <Content Include="wwwroot\js\slick.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.1.0" />
+    <PackageReference Include="BuildBundlerMinifier" Version="2.4.337" />
+    <PackageReference Include="Magick.NET.Core-Q8" Version="7.0.5.502" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
+ 
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
+  
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
+    <PackageReference Include="WebMarkupMin.AspNetCore1" Version="2.4.0" />
+   
+  </ItemGroup>
+  <ItemGroup>
+    
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="1.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Butv.Core\Butv.Core.csproj" />
+    <ProjectReference Include="..\Butv.Data\Butv.Data.csproj" />
+    <ProjectReference Include="..\Butv.Services\Butv.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Shared\Components\Menu\" />
+    <Folder Include="Views\Shared\Components\MovieActor\" />
+    <Folder Include="Views\Shared\Components\MoviesByPeriod\" />
+    <Folder Include="Views\Shared\Components\Tag\" />
+    <Folder Include="Views\Shared\Components\RecommendedMovies\" />
+    <Folder Include="wwwroot\images\thumbs\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,7 @@
+@{
+    ViewData["Title"] = Model.Name;
+
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+}
+@model CategoryModel
+@await Component.InvokeAsync("MoviesOnCategory", new { pageIndex=1 })

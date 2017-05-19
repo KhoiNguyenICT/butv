@@ -1,0 +1,19 @@
+@model MenuModel
+<ul id="menu-header" class="nav navbar-nav navbar-right">
+    @foreach (var m in Model.Categories)
+    {
+        <li class="dropdown submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">@m.Name <i class="fa fa-angle-down"></i></a>
+            <ul role="menu" class="dropdown-menu">
+                @foreach (var s in m.SubCategories)
+                {
+                    <li><a asp-route="category" asp-route-sename="@s.SeName">@s.Name</a></li>
+                }
+            </ul>
+        </li>
+    }
+    @*        <li><a title="" href="#">Phim chiếu rạp</a></li>
+    *@
+    @*<li><a title="" href="#">TV show</a></li>*@
+    <li><a title="" href="#">Đăng kí/Đăng nhập</a></li>
+</ul>

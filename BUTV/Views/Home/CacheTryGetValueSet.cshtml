@@ -1,0 +1,12 @@
+
+@{
+    ViewData["Title"] = "CacheTryGetValueSet";
+}
+
+<h2>CacheTryGetValueSet</h2>
+
+@model string
+
+value: @Model
+@*<h3>Current Time: @DateTime.Now.TimeOfDay.ToString()</h3>
+<h3>Cached Time: @(Model == null ? "No cached entry found" : Model.Value.TimeOfDay.ToString())</h3>*@

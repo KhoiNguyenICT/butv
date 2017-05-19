@@ -1,0 +1,31 @@
+﻿@model MovieEntityModel
+
+<div class="view view-first">
+    <img src="@Model.Picture.ImageUrl" />
+    <div class="mask">
+        <span>@Model.Name</span>
+        @if (Model.UserRating > 0)
+                                {
+            <p>Đánh giá: <em>@Model.UserRating</em></p>
+                                }
+
+        @if (Model.ImdbRating.Length > 0)
+                            {
+            <p>Imdb Rating: <em>@Model.ImdbRating</em></p>
+                                }
+        <p>Năm sản xuất: @Model.Year</p>
+        <p class="description">@Model.ShortDesc</p>
+        <div class="mask-bottom">
+            @if (Model.Trailer.Length > 0)
+                                    {
+                <button href="#" type="button" data-sename="@Model.SeName" class="btn btn-primary" data-toggle="modal" data-title="@Model.Name" data-target=".view-trailer" data-trailer="@Model.Trailer">Trailer</button>
+                                    }
+            <a asp-route="moviedetail" asp-route-sename="@Model.SeName" title="chi tiết" class="btn">Xem</a>
+        </div>
+    </div>
+</div>
+<a asp-route="moviedetail" asp-route-sename="@Model.SeName"><h2 class="title-movie">@Model.Name</h2> </a>
+@if (Model.HasEpisode)
+                        {
+    <div class="item-episodes">Tập<br /><span>@Model.LastEpisode</span></div>
+                        }

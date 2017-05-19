@@ -1,0 +1,18 @@
+﻿<div class="tab-right">
+    <ul class="nav nav-tabs" role="tablist">
+      @*  <li role="presentation" class="active"><a href="#tabmovie1" aria-controls="tabmovie1" role="tab" data-toggle="tab">Ngày</a></li>*@
+        <li role="presentation" class="active"><a href="#tabmovie1" aria-controls="profile" role="tab" data-toggle="tab">Tuần</a></li>
+        <li role="presentation"><a href="#tabmovie2" aria-controls="messages" role="tab" data-toggle="tab">Tháng</a></li>
+    </ul>
+    <div class="tab-content">
+        @*<div role="tabpanel" class="tab-pane active" id="tabmovie1">            
+            <vc:movies-by-period sort-by="@SortBy.Day"> </vc:movies-by-period>
+        </div>*@
+        <div role="tabpanel" class="tab-pane active" id="tabmovie1"> 
+            <vc:movies-by-period sort-by="@SortBy.Week"> </vc:movies-by-period>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="tabmovie2"> 
+            <vc:movies-by-period sort-by="@SortBy.Month"> </vc:movies-by-period>         
+        </div>
+    </div>
+</div>

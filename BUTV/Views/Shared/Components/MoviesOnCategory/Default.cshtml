@@ -1,0 +1,47 @@
+﻿@model MoviesOnCategoriesModel
+@if (Model.Movies.Any())
+{
+    <h1 class="title fleft"><a asp-route="category" asp-route-sename="@Model.CategorySeName">@Model.CategoryName</a></h1>
+    <div class="clearfix"></div>
+    <ul class="row list-movie">
+        @foreach (var m in Model.Movies)
+                {
+            <li class="col-md-3 col-sm-4 col-xs-6">
+               @await Html.PartialAsync("~/Views/Movie/_MovieItem.cshtml", m)
+            </li>
+        }
+    </ul>
+    <br />
+    <p id="loadMore" style="text-align: center;" data-pagenumber="2">
+        <a class="btn btn-warning btn-lg">
+            Xem thêm »
+            <span>
+                <img id="loading" style="display: none;" src="~/images/icons/ajax-loader.gif" />
+            </span>
+        </a>
+    </p>
+    <script>
+        var loading = $("#loading");
+        $("#loadMore").on("click", function (e) {
+
+            e.preventDefault();
+            $(document).on({
+
+                ajaxStart: function () {
+                    loading.show();
+                },
+                ajaxStop: function () {
+                    loading.hide();
+                }
+            });
+
+            $.get("/Movie/LoadMore?categoryId=" + @Model.CategoryId + "&PageNumber=" + $("#loadMore").data("pagenumber"), function (data) {
+                $(".list-movie").append(data.modelString);
+                $("#loadMore").data("pagenumber", data.pageNumber + 1);
+            });
+            return false;
+        });
+
+    </script>
+}
+@await Html.PartialAsync("_PopupTrailer")

@@ -1,0 +1,51 @@
+﻿@model IList<MoviesOnCategoriesModel>
+@if (Model.Any())
+{
+    foreach (var item in Model)
+    {
+        if (item.Movies.Any())
+        {
+            <h2 class="title fleft"><a asp-route="category" asp-route-sename="@item.CategorySeName">@item.CategoryName</a></h2>
+            <div class="fright subcat-filter">
+                <div class="dropdown fright hidden769">
+                    <a id="dLabel" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Xem thêm
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        @foreach (var c in item.Categories)
+                        {
+                        <li><a class="active" asp-route="default" asp-route-id="@c.Id">@c.ShortCountryName</a></li>
+                        }
+                    </ul>
+                </div>
+                <ul class="subcat-list fright">
+                    @foreach (var c in item.Categories)
+                    {
+                    <li>
+                        @if (c.IsActive)
+                            {
+                            <a class="active" asp-route="category" asp-route-sename="@c.SeName">@c.ShortCountryName</a>
+                            }
+                            else
+                            {
+                            <a asp-route="category" asp-route-sename="@c.SeName">@c.ShortCountryName</a>
+                            }
+
+                    </li>
+                    }
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+            <ul class="row list-movie">
+                @foreach (var m in item.Movies)
+                {
+                <li class="col-md-3 col-sm-4 col-xs-6">
+                    @await Html.PartialAsync("~/Views/Movie/_MovieItem.cshtml", m)
+                </li>
+                }
+            </ul>
+        }
+    }    
+}
+@Html.Partial("_PopupTrailer")

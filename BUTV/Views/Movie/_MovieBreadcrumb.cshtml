@@ -1,0 +1,17 @@
+﻿@model MovieBreadcrumbModel
+<div class="breadcrumb">
+    <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="@Url.RouteUrl("HomePage")">Trang chủ</a>
+        </li>
+        @foreach (var category in Model.CategoryBreadcrumb)
+            {
+            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="@Url.RouteUrl("Category", new { SeName = category.SeName })" title="">@category.Name</a>
+            </li>
+        }
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <span title="" itemprop="name">@Model.MovieName</span>
+        </li>
+    </ul>
+</div>

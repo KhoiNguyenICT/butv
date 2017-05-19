@@ -1,0 +1,34 @@
+<div class="search"><input type="text" class="search-box" value="" placeholder="Tìm kiếm phim" /></div>
+<script type="text/javascript">
+    function htmlEncode(value) {
+        return $('<div/>').text(value).html();
+    }
+    function setLocation(url) {
+        window.location.href = url;
+    }
+
+                $(document).ready(function() {
+                    $('.search-box').autocomplete({
+                            delay: 500,
+                            minLength: 3,
+                            source: '@(Url.RouteUrl("SearchAutoComplete"))',
+                            appendTo: '.search',
+                            select: function (event, ui) {
+                                $(".search-box").val(ui.item.label);
+                                setLocation(ui.item.url);
+                                return false;
+                            }
+                    })
+
+                        .data("ui-autocomplete")._renderItem = function (ul, item) {
+                          
+                            var t = item.label;
+                            //html encode
+                            t = htmlEncode(t);
+                            return $("<li></li>")
+                                .data("item.autocomplete", item)
+                                .append("<a><span>" + t + "</span></a>")
+                                .appendTo(ul);
+                        };
+                });
+</script>

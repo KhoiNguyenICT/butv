@@ -1,0 +1,73 @@
+﻿@model ActorListModel
+<div class="title">Nghệ sĩ tham gia</div>
+@if (Model.ActorList.Any())
+{
+<div class="artist-item responsive">
+    @foreach (var item in Model.ActorList)
+    {
+    <div class="item">
+        <a href="#">
+            <div class="img-item">
+                <img src="@item.Picture.ImageUrl"  alt="@item.Name"/>
+                @*<amp-img src="@item.Picture.ImageUrl"
+                       width="110"
+                         height="110"
+                         
+                         layout="responsive"
+                         alt="an image">
+                </amp-img>*@
+            </div>
+        </a>
+        <div class="intro-text">
+            <h3><a href="#" title="@item.Name">@item.Name<em>@item.Character</em></a></h3>
+        </div>
+    </div>
+    }
+</div>
+} 
+@section Scripts {
+<script>
+        $('.responsive').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 6,
+            slidesToScroll: 6,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 320,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+</script>
+    }

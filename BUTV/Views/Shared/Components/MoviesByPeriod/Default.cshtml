@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MovieEntityModel>
+@if (Model != null && Model.Any())
+{
+    <ul class="movie-right">
+        @foreach (var item in Model)
+        {
+            <li>
+                <a asp-route="moviedetail" asp-route-sename="@item.SeName">
+                    <img class="pull-left" src="@item.Picture.ImageUrl" /><p>@item.Name<span>@item.RealName</span><span>@item.Length</span><span>Lượt xem: @item.View</span>
+                    @*<span class="rate-vote rate-vote-9"></span>*@
+                    </p>
+                </a>
+            </li>
+        }
+    </ul>
+}

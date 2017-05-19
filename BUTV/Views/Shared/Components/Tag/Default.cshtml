@@ -1,0 +1,7 @@
+@model IEnumerable<BUTV.Models.Tag.TagModel>
+<ul>
+    @foreach (var t in Model)
+    {
+    <li class="tags-item"><a href="#">@t.Name</a></li>
+    }
+</ul>

@@ -1,0 +1,73 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (IsSectionDefined("HomeBanner"))
+{
+    @section HomeBanner {
+        @RenderSection("HomeBanner")
+    }
+}
+
+<div class="row">
+    <div class="content col-lg-9">
+        @RenderBody()
+    </div>
+    <div class="col-right col-lg-3">
+        @*@await Html.PartialAsync("_TopBuer")*@
+        <div class="facebook-box">
+            <div class="fb-page" data-href="https://www.facebook.com/Butv.org" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/BUTV.org" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/BUTV.org">BUTV.org</a></blockquote></div>
+        </div>
+        @await Html.PartialAsync("_SortedMovieOnPeriods")
+        @*<div class="news-right">
+                <div class="title">Tin tức Điện Ảnh</div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="~/images/nguoi-dep-va-quai-vat-belle.jpg" />
+                            <p>Nai lưng kiếm tiền, vợ đi nghỉ mát mang "ốc" về bắt "đổ vỏ"</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/images/nguoi-dep-va-quai-vat-belle.jpg" />
+                            <p>Nai lưng kiếm tiền, vợ đi nghỉ mát mang "ốc" về bắt "đổ vỏ"</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/images/nguoi-dep-va-quai-vat-belle.jpg" />
+                            <p>Nai lưng kiếm tiền, vợ đi nghỉ mát mang "ốc" về bắt "đổ vỏ"</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/images/nguoi-dep-va-quai-vat-belle.jpg" />
+                            <p>Nai lưng kiếm tiền, vợ đi nghỉ mát mang "ốc" về bắt "đổ vỏ"</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/images/nguoi-dep-va-quai-vat-belle.jpg" />
+                            <p>Nai lưng kiếm tiền, vợ đi nghỉ mát mang "ốc" về bắt "đổ vỏ"</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="profile-item">
+                <div class="title">Hồ sơ diễn viên</div>
+                <a class="profile-link" title="" href="#">
+                    <span class="profile-image">
+                        <img src="~/images/147254077218824-ly-lien-kiet-01.jpg" /></span>
+                    <span class="star-profile-name">Lý Liên Kiệt (Jet Li)</span>
+                </a>
+                <span class="star-profile-summary">Lý Liên Kiệt (phồn thể: 李連杰; giản thể: 李连杰; bính âm: Lǐ Liánjié; Wade-Giles: Li Lien-chieh; Quảng Đông: Ley Lin Git; tên tiếng Anh: Jet Li; sinh ngày 26 tháng 4 năm 1963 tại Bắc Kinh - Trung quốc) là</span>
+            </div>*@
+        
+        <div class="tags-right">
+            <div class="title">Từ khóa</div>
+           @await Component.InvokeAsync("Tag")
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,305 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
+<html ⚡ lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>@ViewData["Title"] - BUTV.org</title>
+    <link rel="canonical" href="http://@Context.Request.Host@Context.Request.Path" />
+    <meta property="og:type" content="@ViewData["article"]" />
+    <meta property="og:title" content="@ViewData["Title"] - BUTV.org" />
+    <meta property="og:description" content="@ViewData["Desc"]" />
+    <meta property="og:image" itemprop="thumbnailUrl" content="@ViewData["Image"]" />
+    <meta property="og:url" content="http://@Context.Request.Host@Context.Request.Path" />
+    <meta itemprop="image" content="@ViewData["FullImg"]" />
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <link href="~/css/slick.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" type="text/css" href="~/css/ripple.css">
+        <link href="~/css/toTop.css" rel="stylesheet" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link href="~/css/slick.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/ripple.min.css" asp-append-version="true" />
+        <link href="~/css/toTop.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"
+              asp-fallback-href="~/lib/font-awesome/css/font-awesome.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+    </environment>
+    @Html.Raw(JavaScriptSnippet.FullScript)
+    <environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>        
+        <script src="~/lib/jquery-ui/jquery-ui.js"></script>
+        <script src="~/js/common.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/lib/jquery-ui/jquery-ui.min.js"></script>        
+        <script src="~/js/common.min.js" asp-append-version="true"></script>
+    </environment>
+    @if (IsSectionDefined("TopHeader"))
+    {
+        @RenderSection("TopHeader")
+    }
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1,end) 0s 1 normal both
+        }
+
+        @@-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @@-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @@-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @@-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @@keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <script src="~/js/slick.min.js"></script>
+    <meta property="fb:app_id" content="795335183971000" />
+    <meta property="fb:pages" content="795335183971000" />
+    <meta property="og:site_name" content="BUTV.org" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+                    <img src="~/images/logo.png" />
+                </a>
+                @await Html.PartialAsync("_SearchBox")
+            </div>
+            <div class="header-links fright">
+                <div class="dropdown login">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" uib-dropdown-toggle="" data-toggle="dropdown" aria-expanded="true">
+                        <i class="fa fa-user"></i>
+                    </button>
+                    <div class="dropdown-menu" uib-dropdown="" role="menu" aria-labelledby="dropdownMenu1">
+                        <div role="presentation">
+                            <div class="form-fields">
+                                <div class="inputs">
+                                    <label for="Email">Email:</label>
+                                    <input autofocus="autofocus" class="email form-control" data-val="true" data-val-email="Wrong email" data-val-required="Please enter your email" id="Email" name="Email" type="text" value="">
+                                </div>
+
+                                <div class="inputs">
+                                    <label for="Password">Mật khẩu:</label>
+                                    <input class="password form-control" id="Password" name="Password" type="password">
+                                </div>
+                                <div class="inputs reversed">
+                                    <input data-val="true" data-val-required="'Remember Me' must not be empty." id="RememberMe" name="RememberMe" type="checkbox" value="true"><input name="RememberMe" type="hidden" value="false">
+                                    <label for="RememberMe">Nhớ mật khẩu?</label>
+                                    <span class="forgot-password">
+                                        <a href="/passwordrecovery">Quên mật khẩu?</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <input class="button-1 login-button" id="menulogin" type="submit" value="Đăng nhập">
+                                <a class="login-fb" target="_parent" href="/Plugins/ExternalAuthFacebook/Login?ReturnUrl=https%3A%2F%2Fthethaoso.net%2F"><i class="fa fa-facebook"></i>Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-collapse collapse bs-navbar-collapse" id="navigationbar" aria-expanded="false">
+                @await Component.InvokeAsync("Menu")
+            </div>
+        </div>
+    </nav>
+    <div class="nav-left">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="img-avatar">
+                        <img src="~/images/1237033_470316296400585_2106675438_n.jpg" />
+                    </span>
+                </a>
+                @*<a href="#"><span class="text-avatar" style="background-color:#00afb3;">T</span></a>*@
+            </li>
+            <li>
+                <a href="#">
+                    <img src="~/images/icon1.png" />
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="~/images/icon2.png" />
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="~/images/icons/icon4.png" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    @if (IsSectionDefined("HomeBanner"))
+    {
+        @RenderSection("HomeBanner", required: false)
+    }
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <footer>
+        <hr />
+        <div class="container">
+            <div class="footer-blurb row">
+                <div class="blurb col-sm-4 col-xs-12">
+                    <p>
+                        Copyright © 2017 BUTV.net. All Rights Reserved.<br />
+                        Nội dung được chia sẻ miễn phí giữa các thành viên
+                        <div class="follow-us">
+                            <div class="social">
+                                <ul class="networks">
+                                    <li class="facebook"><a href="http://www.facebook.com/butv.org" target="_blank">Facebook</a></li>                                    
+                                    <li class="rss"><a href="/news/rss/1">RSS</a></li>
+                                    @*<li class="youtube"><a href="http://www.youtube.com/user/nopCommerce" target="_blank">YouTube</a></li>
+                                    <li class="google-plus"><a href="https://plus.google.com/+nopcommerce" target="_blank">Google+</a></li>*@
+                                </ul>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+                <div class="blurb col-sm-2 col-xs-6">
+                    <h4>Phim mới </h4>
+                    <ul>
+                        <li><a href="#" title="">Phim lẻ mới</a></li>
+                        <li><a href="#" title="">Phim bộ mới</a></li>
+                        <li><a href="#" title="">Phim chiếu rạp</a></li>
+                        <li><a href="#" title="">Phim kinh điển</a></li>
+                        <li><a href="#" title="">Phim sắp chiếu</a></li>
+                    </ul>
+                </div>
+                <div class="blurb col-sm-2 col-xs-6">
+                    <h4>Phim lẻ</h4>
+                    <ul>
+                        <li><a href="#" title="">Phim hành động</a></li>
+                        <li><a href="#" title="">Phim kiếm hiệp</a></li>
+                        <li><a href="#" title="">Phim kinh dị</a></li>
+                        <li><a href="#" title="">Phim viễn tưởng</a></li>
+                        <li><a href="#" title="">Phim hoạt hình</a></li>
+                    </ul>
+                </div>
+                <div class="blurb col-sm-2 col-xs-6">
+                    <h4>Phim bộ</h4>
+                    <ul>
+                        <li><a href="#" title="">Phim bộ Hàn Quốc</a></li>
+                        <li><a href="#" title="">Phim bộ Trung Quốc</a></li>
+                        <li><a href="#" title="">Phim bộ Mỹ</a></li>
+                        <li><a href="#" title="">Phim bộ Việt Nam</a></li>
+                        <li><a href="#" title="">Phim bộ Hồng Kông</a></li>
+                    </ul>
+                </div>
+                <div class="blurb col-sm-2 col-xs-6">
+                    <h4>Quy định</h4>
+                    <ul>
+                        <li><a href="#" title="">Điều khoản sử dụng</a></li>
+                        <li><a href="#" title="">Chính sách riêng tư</a></li>
+                        <li><a href="#" title="">Nguyên tắc cộng đồng</a></li>
+                        <li><a href="#" title="">Khiếu nại bản quyền</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+    @await Html.PartialAsync("_Social")
+    <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+    <script>
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function () {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop: 0                       // Scroll to top of body
+            }, 500);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿@model MoviesOnCategoriesModel
+@if (Model.Movies.Any())
+{  
+        @foreach (var m in Model.Movies)
+        {
+            <li class="col-md-3 col-sm-4 col-xs-6">
+                <div class="view view-first">
+                    <img src="@m.Picture.ImageUrl" />
+                    <div class="mask">
+                        <span>@m.Name</span>
+                        @if (m.UserRating > 0)
+                        {
+                            <p>Đánh giá: <em>@m.UserRating</em></p>
+                        }
+
+                        @if (m.ImdbRating.Length > 0)
+                        {
+                            <p>Imdb Rating: <em>@m.ImdbRating</em></p>
+                        }
+                        <p>Năm sản xuất: @m.Year</p>
+                        <p class="description">@m.ShortDesc</p>
+                        <div class="mask-bottom">
+                            @if (m.Trailer.Length > 0)
+                            {
+                                <button href="#" type="button" class="btn btn-primary" data-toggle="modal" data-title="@m.Name" data-target=".view-trailer" data-trailer="@m.Trailer">Trailer</button>
+                            }
+                            <a href="/phim/@m.SeName" title="chi tiết" class="btn">Xem</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/phim/@m.SeName"><h2 class="title-movie">@m.Name</h2> </a>
+                @if (m.HasEpisode)
+                {
+                    @*<div class="item-episodes">Tập<br /><span>@m.LastEpisode</span></div>*@
+                }
+            </li>
+        }
+   
+}

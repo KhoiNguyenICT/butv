@@ -13,3 +13,4 @@ Mọi người có thể thoải mái clone project về, trong project có bao 
 
 Sql Server 2012 db backup: /Butv/data/butvdb.zip
 
+Liên hệ: congthanhgiong@outlook.com

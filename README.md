@@ -11,6 +11,6 @@ Project xây dựng trên nền tảng kỹ thuật:
 
 Mọi người có thể thoải mái clone project về, trong project có bao gồm cả database của web butv.org.  
 
-Sql Server 2012 db backup: /Butv/data/butvdb.zip
+Sql Server 2012 db backup: down tại https://www.mediafire.com/file/n9j79x3zr4rmfkr/butvdb.zip/file
 
-Liên hệ: congthanhgiong@outlook.com
+
